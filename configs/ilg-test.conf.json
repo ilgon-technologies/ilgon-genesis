@@ -1,0 +1,573 @@
+{
+  "name": "ilg",
+  "engine": {
+    "authorityRound": {
+      "params": {
+        "stepDuration": 5,
+        "blockReward": 0,
+        "maximumUncleCountTransition": 0,
+        "maximumUncleCount": 0,
+        "validators": {
+          "contract": "0xB000000000000000000000000000000000000000"
+        },
+        "blockRewardContractAddress": "0xA000000000000000000000000000000000000000",
+        "blockRewardContractTransition": 0
+      }
+    }
+  },
+  "params": {
+    "gasLimitBoundDivisor": 5000,
+    "maximumExtraDataSize": "0x20",
+    "minGasLimit": "0x1312d00",
+    "networkID": "0x696c67",
+    "transactionPermissionContract": "0xC000000000000000000000000000000000000000",
+    "transactionPermissionContractTransition": 0,
+    "eip140Transition": "0x00",
+    "eip145Transition": "0x00",
+    "eip161abcTransition": "0x01",
+    "eip161dTransition": "0x00",
+    "eip211Transition": "0x00",
+    "eip214Transition": "0x00",
+    "eip658Transition": "0x00",
+    "eip1014Transition": "0x00",
+    "eip1052Transition": "0x00",
+    "eip1283Transition": "0x00",
+    "eip1344Transition": "0x00",
+    "eip1706Transition": "0x00",
+    "eip1884Transition": "0x00",
+    "eip2028Transition": "0x00"
+  },
+  "genesis": {
+    "seal": {
+      "authorityRound": {
+        "step": "0x0",
+        "signature": "0x0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+      }
+    },
+    "difficulty": "0x20000",
+    "gasLimit": "0x1312d00",
+    "timestamp": 1609697700
+  },
+  "nodes": [
+    "enode://3d1ecffe371a7b9903aab56be26c8db89802bcb5eceeb370e33baeb40edcf45bd400ae88322fc323d918d57f6628561017bafee09b8d6db5a30638a6b5a2b93f@104.248.156.58:30303",
+    "enode://1274a3bbe2b34b4e61e32607b4bf6d13b783f1d38a1c3cf570ecca41287431b8c1e1c605dbdad39143ebfcebf66c9c50f93ca6133b51bcd1381d9b1d0ffea535@161.97.121.183:30303",
+    "enode://66e01e4d5b8d2adad3fd3da71218f0da34d2eb2a165a48bb11e6b0450c6060f16fefe97b0915f93ec77ed95385e2646d30c266bc04b90f138cf6c41fa8d2a698@13.251.200.141:30303"
+  ],
+  "accounts": {
+    "0x0000000000000000000000000000000000000001": {
+      "balance": "1",
+      "builtin": {
+        "name": "ecrecover",
+        "pricing": {
+          "0": {
+            "price": {
+              "linear": {
+                "base": 3000,
+                "word": 0
+              }
+            }
+          }
+        }
+      }
+    },
+    "0x0000000000000000000000000000000000000002": {
+      "balance": "1",
+      "builtin": {
+        "name": "sha256",
+        "pricing": {
+          "0": {
+            "price": {
+              "linear": {
+                "base": 60,
+                "word": 12
+              }
+            }
+          }
+        }
+      }
+    },
+    "0x0000000000000000000000000000000000000003": {
+      "balance": "1",
+      "builtin": {
+        "name": "ripemd160",
+        "pricing": {
+          "0": {
+            "price": {
+              "linear": {
+                "base": 600,
+                "word": 120
+              }
+            }
+          }
+        }
+      }
+    },
+    "0x0000000000000000000000000000000000000004": {
+      "balance": "1",
+      "builtin": {
+        "name": "identity",
+        "pricing": {
+          "0": {
+            "price": {
+              "linear": {
+                "base": 15,
+                "word": 3
+              }
+            }
+          }
+        }
+      }
+    },
+    "0x0000000000000000000000000000000000000005": {
+      "builtin": {
+        "name": "modexp",
+        "pricing": {
+          "0": {
+            "price": {
+              "modexp": {
+                "divisor": 20
+              }
+            }
+          }
+        }
+      }
+    },
+    "0x0000000000000000000000000000000000000006": {
+      "builtin": {
+        "name": "alt_bn128_add",
+        "pricing": {
+          "0": {
+            "price": {
+              "alt_bn128_const_operations": {
+                "price": 150
+              }
+            }
+          }
+        }
+      }
+    },
+    "0x0000000000000000000000000000000000000007": {
+      "builtin": {
+        "name": "alt_bn128_mul",
+        "pricing": {
+          "0": {
+            "price": {
+              "alt_bn128_const_operations": {
+                "price": 6000
+              }
+            }
+          }
+        }
+      }
+    },
+    "0x0000000000000000000000000000000000000008": {
+      "builtin": {
+        "name": "alt_bn128_pairing",
+        "pricing": {
+          "0": {
+            "price": {
+              "alt_bn128_pairing": {
+                "base": 45000,
+                "pair": 34000
+              }
+            }
+          }
+        }
+      }
+    },
+    "0x0000000000000000000000000000000000000009": {
+      "builtin": {
+        "name": "blake2_f",
+        "pricing": {
+          "0": {
+            "info": "Istanbul HF",
+            "price": {
+              "blake2_f": {
+                "gas_per_round": 1
+              }
+            }
+          }
+        }
+      }
+    },
+    "0xA000000000000000000000000000000000000000": {
+      "name": "Block reward proxy contract",
+      "balance": "1",
+      "constructor": {
+        "compiler": {
+          "contractName": "BlockRewardProxy",
+          "file": "contracts/common/blockReward.sol",
+          "version": "v0.4.26+commit.4563c3fc",
+          "settings": {
+            "optimizer": {
+              "enabled": true,
+              "runs": 200
+            }
+          }
+        },
+        "constructorParameters": [
+          {
+            "name": "_owner",
+            "hint": "Multiowner contract address",
+            "type": "address",
+            "value": "0xFF00000000000000000000000000000000000000"
+          },
+          {
+            "name": "_libAddress",
+            "hint": "Block reward library contract address",
+            "type": "address",
+            "value": "0xA100000000000000000000000000000000000000"
+          }
+        ]
+      }
+    },
+    "0xA100000000000000000000000000000000000000": {
+      "name": "Block reward library contract",
+      "balance": "1",
+      "constructor": {
+        "compiler": {
+          "contractName": "BlockRewardLib",
+          "file": "contracts/common/blockReward.sol",
+          "version": "v0.4.26+commit.4563c3fc",
+          "settings": {
+            "optimizer": {
+              "enabled": true,
+              "runs": 200
+            }
+          }
+        },
+        "constructorParameters": [
+          {
+            "name": "_owner",
+            "hint": "Multiowner contract address",
+            "type": "address",
+            "value": "0xFF00000000000000000000000000000000000000"
+          },
+          {
+            "name": "_proxyAddress",
+            "hint": "Block reward proxy contract address",
+            "type": "address",
+            "value": "0xA000000000000000000000000000000000000000"
+          },
+          {
+            "name": "_baseBlockReward",
+            "hint": "Base block reward amount",
+            "type": "uint256",
+            "value": "0x1158e460913d00000"
+          }
+        ]
+      }
+    },
+    "0xB000000000000000000000000000000000000000": {
+      "name": "Validator set proxy contract",
+      "balance": "1",
+      "constructor": {
+        "compiler": {
+          "contractName": "ValidatorSetProxy",
+          "file": "contracts/common/validatorSet.sol",
+          "version": "v0.4.26+commit.4563c3fc",
+          "settings": {
+            "optimizer": {
+              "enabled": true,
+              "runs": 200
+            }
+          }
+        },
+        "constructorParameters": [
+          {
+            "name": "_owner",
+            "hint": "Multiowner contract address",
+            "type": "address",
+            "value": "0xFF00000000000000000000000000000000000000"
+          },
+          {
+            "name": "_libAddress",
+            "hint": "Validator set library contract address",
+            "type": "address",
+            "value": "0xB100000000000000000000000000000000000000"
+          }
+        ]
+      }
+    },
+    "0xB100000000000000000000000000000000000000": {
+      "name": "Validator set library contract",
+      "balance": "1",
+      "constructor": {
+        "compiler": {
+          "contractName": "ValidatorSetLib",
+          "file": "contracts/common/validatorSet.sol",
+          "version": "v0.4.26+commit.4563c3fc",
+          "settings": {
+            "optimizer": {
+              "enabled": true,
+              "runs": 200
+            }
+          }
+        },
+        "constructorParameters": [
+          {
+            "name": "_owner",
+            "hint": "Multiowner contract address",
+            "type": "address",
+            "value": "0xFF00000000000000000000000000000000000000"
+          },
+          {
+            "name": "_proxyAddress",
+            "hint": "Validator set proxy contract address",
+            "type": "address",
+            "value": "0xB000000000000000000000000000000000000000"
+          },
+          {
+            "name": "_baseValidators",
+            "hint": "Initial validator addresses",
+            "type": "address[]",
+            "value": [
+              "0x236acb7b5127e88fd54c5492d570c2b33591dc4d",
+              "0xb534163f6e9e4258c0ff4eaea2f480ae43ababaa",
+              "0x09a87685fa46057e2f62b2e4ac5ebd78b4c3e2d9"
+            ]
+          }
+        ]
+      }
+    },
+    "0xC000000000000000000000000000000000000000": {
+      "name": "Transaction premission proxy contract",
+      "balance": "1",
+      "constructor": {
+        "compiler": {
+          "contractName": "TxPremissionProxy",
+          "file": "contracts/common/txPremission.sol",
+          "version": "v0.4.26+commit.4563c3fc",
+          "settings": {
+            "optimizer": {
+              "enabled": true,
+              "runs": 200
+            }
+          }
+        },
+        "constructorParameters": [
+          {
+            "name": "_owner",
+            "hint": "Multiowner contract address",
+            "type": "address",
+            "value": "0xFF00000000000000000000000000000000000000"
+          },
+          {
+            "name": "_libAddress",
+            "hint": "Transaction premission library contract address",
+            "type": "address",
+            "value": "0xC100000000000000000000000000000000000000"
+          }
+        ]
+      }
+    },
+    "0xC100000000000000000000000000000000000000": {
+      "name": "Transaction premission library contract",
+      "balance": "1",
+      "constructor": {
+        "compiler": {
+          "contractName": "TxPremissionLib",
+          "file": "contracts/common/txPremission.sol",
+          "version": "v0.4.26+commit.4563c3fc",
+          "settings": {
+            "optimizer": {
+              "enabled": true,
+              "runs": 200
+            }
+          }
+        },
+        "constructorParameters": [
+          {
+            "name": "_owner",
+            "hint": "Multiowner contract address, which can also start service transaction",
+            "type": "address",
+            "value": "0xFF00000000000000000000000000000000000000"
+          },
+          {
+            "name": "_proxyAddress",
+            "hint": "Transaction premission proxy contract address",
+            "type": "address",
+            "value": "0xC000000000000000000000000000000000000000"
+          },
+          {
+            "name": "_validatorSet",
+            "hint": "Initial validator addresses, they can start service transactions",
+            "type": "address",
+            "value": "0xB000000000000000000000000000000000000000"
+          }
+        ]
+      }
+    },
+    "0x4fe4e666be5752f1fdd210f4ab5de2cc26e3e0e8": {
+      "name": "Ethereum name service contract",
+      "balance": "1",
+      "constructor": {
+        "compiler": {
+          "contractName": "ENSDeployer",
+          "file": "contracts/common/ENSDeployer.sol",
+          "version": "v0.5.17+commit.d19bba13",
+          "settings": {
+            "optimizer": {
+              "enabled": true,
+              "runs": 200
+            }
+          }
+        },
+        "constructorParameters": []
+      }
+    },
+    "0xD000000000000000000000000000000000000000": {
+      "name": "Reputation contract",
+      "balance": "1",
+      "constructor": {
+        "compiler": {
+          "contractName": "Reputation",
+          "file": "contracts/common/reputation.sol",
+          "version": "v0.4.26+commit.4563c3fc",
+          "settings": {
+            "optimizer": {
+              "enabled": true,
+              "runs": 200
+            }
+          }
+        },
+        "constructorParameters": [
+          {
+            "name": "_owner",
+            "hint": "Multiowner contract address",
+            "type": "address",
+            "value": "0xFF00000000000000000000000000000000000000"
+          },
+          {
+            "name": "_nonOwnerPrefix",
+            "hint": "Prefix what a group must have when an non-owner creates",
+            "type": "string",
+            "value": "private_"
+          }
+        ]
+      }
+    },
+    "0xFF00000000000000000000000000000000000000": {
+      "name": "Blockchain owner",
+      "balance": "1",
+      "constructor": {
+        "compiler": {
+          "contractName": "WeightedMultiOwner",
+          "file": "contracts/common/weightedMultiOwner.sol",
+          "version": "v0.4.26+commit.4563c3fc",
+          "settings": {
+            "optimizer": {
+              "enabled": true,
+              "runs": 200
+            }
+          }
+        },
+        "constructorParameters": [
+          {
+            "name": "_owners",
+            "hint": "Owner addresses",
+            "type": "address[]",
+            "value": [
+              "0x4B64C42F7ca2e82359811e741871516399ADEb1C",
+              "0xb29e163105db11A4114D63FeC7961A5BFEDe2c78",
+              "0x36c43FcAdB7080798A2B8c4554B7773F1A01CBb3",
+              "0xEC8dE0feF84b9f51b4639963E8Bf07923e8Abc51",
+              "0x5E9903b8119A56D60EDE5E4294228a24F7F44410",
+              "0xdFdb9Fa20e44A02f45C7e036D40749B7488cfeD3"
+            ]
+          },
+          {
+            "name": "_ownerWeights",
+            "hint": "Owner weights",
+            "type": "uint8[]",
+            "value": [3, 1, 1, 1, 1, 1]
+          },
+          {
+            "name": "_required",
+            "hint": "Weight amount needs to do something",
+            "type": "uint256",
+            "value": 3
+          }
+        ]
+      }
+    },
+    "0xe5cfcb8bb377f3ad008e562fdd8f4a52706d5648": {
+      "name": "Premine address",
+      "balance": "0x94e47b8d68171534000000",
+      "constructor": {
+        "compiler": {
+          "contractName": "WeightedMultiOwner",
+          "file": "contracts/common/weightedMultiOwner.sol",
+          "version": "v0.4.26+commit.4563c3fc",
+          "settings": {
+            "optimizer": {
+              "enabled": true,
+              "runs": 200
+            }
+          }
+        },
+        "constructorParameters": [
+          {
+            "name": "_owners",
+            "hint": "Owner addresses",
+            "type": "address[]",
+            "value": [
+              "0x4B64C42F7ca2e82359811e741871516399ADEb1C",
+              "0xbCa7A9428c77F9B6941Fb730b174f9ce9a1F0714",
+              "0x4784bdB3d84CB6D77D959B98CB51c7BDA2616753",
+              "0xad19E2114aD5c758fa6f2eC2c4002d4b7eab75db"
+            ]
+          },
+          {
+            "name": "_ownerWeights",
+            "hint": "Owner weights",
+            "type": "uint8[]",
+            "value": [2, 1, 1, 1]
+          },
+          {
+            "name": "_required",
+            "hint": "Weight amount needs to do something",
+            "type": "uint256",
+            "value": 2
+          }
+        ]
+      }
+    },
+    "0x4B64C42F7ca2e82359811e741871516399ADEb1C": {
+      "name": "Owner address",
+      "balance": "0x1158e460913d00000"
+    },
+    "0xb29e163105db11A4114D63FeC7961A5BFEDe2c78": {
+      "name": "Owner address",
+      "balance": "0x1158e460913d00000"
+    },
+    "0x36c43FcAdB7080798A2B8c4554B7773F1A01CBb3": {
+      "name": "Owner address",
+      "balance": "0x1158e460913d00000"
+    },
+    "0xEC8dE0feF84b9f51b4639963E8Bf07923e8Abc51": {
+      "name": "Owner address",
+      "balance": "0x1158e460913d00000"
+    },
+    "0x5E9903b8119A56D60EDE5E4294228a24F7F44410": {
+      "name": "Owner address",
+      "balance": "0x1158e460913d00000"
+    },
+    "0xdFdb9Fa20e44A02f45C7e036D40749B7488cfeD3": {
+      "name": "Owner address",
+      "balance": "0x1158e460913d00000"
+    },
+    "0xbCa7A9428c77F9B6941Fb730b174f9ce9a1F0714": {
+      "name": "Owner address",
+      "balance": "0x1158e460913d00000"
+    },
+    "0x4784bdB3d84CB6D77D959B98CB51c7BDA2616753": {
+      "name": "Owner address",
+      "balance": "0x1158e460913d00000"
+    },
+    "0xad19E2114aD5c758fa6f2eC2c4002d4b7eab75db": {
+      "name": "Owner address",
+      "balance": "0x1158e460913d00000"
+    }
+  }
+}
