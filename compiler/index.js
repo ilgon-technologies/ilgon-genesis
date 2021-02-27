@@ -153,16 +153,7 @@ async function compileAccounts(compilers, accounts) {
     log.info("compile", `compiling contract "${address}"${name}`);
     const compilerInfo = accountInfo.constructor.compiler;
 
-    const compilationResult = await compileSolidity(compilers, compilerInfo);
-
-    const abi =
-      compilationResult.contracts[compilerInfo.file][compilerInfo.contractName]
-        .abi;
-
-    let data =
-      "0x" +
-      compilationResult.contracts[compilerInfo.file][compilerInfo.contractName]
-        .evm.bytecode.object;
+    let { abi, data } = await compileSolidity(compilers, compilerInfo);
 
     const contractConstructor = getConstructor(abi);
     if (typeof contractConstructor !== "undefined") {
@@ -180,16 +171,20 @@ async function compileAccounts(compilers, accounts) {
 }
 
 async function compileSolidity(compilers, compilerInfo) {
+  // We require a different filename because it is included
+  // in the bytecode hash and the bytecode must not change.
+  const fileName = path.basename(compilerInfo.file);
+
   const compilerInput = {
     language: "Solidity",
     sources: {
-      [compilerInfo.file]: {
+      [fileName]: {
         content: await fs.readFile(compilerInfo.file, "utf-8"),
       },
     },
     settings: {
       outputSelection: {
-        [compilerInfo.file]: {
+        [fileName]: {
           [compilerInfo.contractName]: ["abi", "evm.bytecode"],
         },
       },
@@ -210,17 +205,26 @@ async function compileSolidity(compilers, compilerInfo) {
 
   if (
     typeof result.contracts === "undefined" ||
-    typeof result.contracts[compilerInfo.file] === "undefined"
+    typeof result.contracts[fileName] === "undefined"
   ) {
     log.error("compile", "compilation failed", result.errors);
     exit(1);
   }
 
-  return result;
+  return {
+    abi: result.contracts[fileName][compilerInfo.contractName].abi,
+    data:
+      "0x" +
+      result.contracts[fileName][compilerInfo.contractName].evm.bytecode.object,
+  };
 }
 
 function encodeConstructorParameters(address, accountInfo, constructorAbi) {
   const params = accountInfo.constructor.constructorParameters;
+  if (typeof params === "undefined") {
+    throw new Error("constructor parameter list missing");
+  }
+
   if (constructorAbi.inputs.length !== params.length) {
     throw new Error(
       address +
