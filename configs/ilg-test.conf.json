@@ -1,5 +1,5 @@
 {
-  "name": "ilg",
+  "name": "Ilgon Test",
   "engine": {
     "authorityRound": {
       "params": {
@@ -19,7 +19,7 @@
     "gasLimitBoundDivisor": 5000,
     "maximumExtraDataSize": "0x20",
     "minGasLimit": "0x1312d00",
-    "networkID": "0x696c67",
+    "networkID": "0x696c6774",
     "transactionPermissionContract": "0xC000000000000000000000000000000000000000",
     "transactionPermissionContractTransition": 0,
     "eip140Transition": "0x00",
@@ -46,12 +46,17 @@
     },
     "difficulty": "0x20000",
     "gasLimit": "0x1312d00",
-    "timestamp": 1609697700
+    "timestamp": "1231006505"
   },
   "nodes": [
-    "enode://3d1ecffe371a7b9903aab56be26c8db89802bcb5eceeb370e33baeb40edcf45bd400ae88322fc323d918d57f6628561017bafee09b8d6db5a30638a6b5a2b93f@104.248.156.58:30303",
+    "enode://3d1ecffe371a7b9903aab56be26c8db89802bcb5eceeb370e33baeb40edcf45bd400ae88322fc323d918d57f6628561017bafee09b8d6db5a30638a6b5a2b93f@163.47.11.62:30303",
+    "enode://3d1ecffe371a7b9903aab56be26c8db89802bcb5eceeb370e33baeb40edcf45bd400ae88322fc323d918d57f6628561017bafee09b8d6db5a30638a6b5a2b93f@node1.testnet.ilgon.network:30303",
+
     "enode://1274a3bbe2b34b4e61e32607b4bf6d13b783f1d38a1c3cf570ecca41287431b8c1e1c605dbdad39143ebfcebf66c9c50f93ca6133b51bcd1381d9b1d0ffea535@161.97.121.183:30303",
-    "enode://66e01e4d5b8d2adad3fd3da71218f0da34d2eb2a165a48bb11e6b0450c6060f16fefe97b0915f93ec77ed95385e2646d30c266bc04b90f138cf6c41fa8d2a698@13.251.200.141:30303"
+    "enode://1274a3bbe2b34b4e61e32607b4bf6d13b783f1d38a1c3cf570ecca41287431b8c1e1c605dbdad39143ebfcebf66c9c50f93ca6133b51bcd1381d9b1d0ffea535@node2.testnet.ilgon.network:30303",
+
+    "enode://66e01e4d5b8d2adad3fd3da71218f0da34d2eb2a165a48bb11e6b0450c6060f16fefe97b0915f93ec77ed95385e2646d30c266bc04b90f138cf6c41fa8d2a698@13.251.200.141:30303",
+    "enode://66e01e4d5b8d2adad3fd3da71218f0da34d2eb2a165a48bb11e6b0450c6060f16fefe97b0915f93ec77ed95385e2646d30c266bc04b90f138cf6c41fa8d2a698@node3.testnet.ilgon.network:30303"
   ],
   "accounts": {
     "0x0000000000000000000000000000000000000001": {
@@ -199,10 +204,7 @@
           "file": "contracts/common/blockReward.sol",
           "version": "v0.4.26+commit.4563c3fc",
           "settings": {
-            "optimizer": {
-              "enabled": true,
-              "runs": 200
-            }
+            "optimizer": { "enabled": true, "runs": 200 }
           }
         },
         "constructorParameters": [
@@ -230,10 +232,7 @@
           "file": "contracts/common/blockReward.sol",
           "version": "v0.4.26+commit.4563c3fc",
           "settings": {
-            "optimizer": {
-              "enabled": true,
-              "runs": 200
-            }
+            "optimizer": { "enabled": true, "runs": 200 }
           }
         },
         "constructorParameters": [
@@ -267,10 +266,7 @@
           "file": "contracts/common/validatorSet.sol",
           "version": "v0.4.26+commit.4563c3fc",
           "settings": {
-            "optimizer": {
-              "enabled": true,
-              "runs": 200
-            }
+            "optimizer": { "enabled": true, "runs": 200 }
           }
         },
         "constructorParameters": [
@@ -298,10 +294,7 @@
           "file": "contracts/common/validatorSet.sol",
           "version": "v0.4.26+commit.4563c3fc",
           "settings": {
-            "optimizer": {
-              "enabled": true,
-              "runs": 200
-            }
+            "optimizer": { "enabled": true, "runs": 200 }
           }
         },
         "constructorParameters": [
@@ -322,9 +315,9 @@
             "hint": "Initial validator addresses",
             "type": "address[]",
             "value": [
-              "0x236acb7b5127e88fd54c5492d570c2b33591dc4d",
-              "0xb534163f6e9e4258c0ff4eaea2f480ae43ababaa",
-              "0x09a87685fa46057e2f62b2e4ac5ebd78b4c3e2d9"
+              "0xd9b431d07395e1d2bc852674f7838d2d1e5845b5",
+              "0x512b6ab497b451569d59cc56122f110da5b6dcd5",
+              "0x54b1752e0cdb0a78b04e659f3682225982c0aef9"
             ]
           }
         ]
@@ -339,10 +332,7 @@
           "file": "contracts/common/txPremission.sol",
           "version": "v0.4.26+commit.4563c3fc",
           "settings": {
-            "optimizer": {
-              "enabled": true,
-              "runs": 200
-            }
+            "optimizer": { "enabled": true, "runs": 200 }
           }
         },
         "constructorParameters": [
@@ -370,10 +360,7 @@
           "file": "contracts/common/txPremission.sol",
           "version": "v0.4.26+commit.4563c3fc",
           "settings": {
-            "optimizer": {
-              "enabled": true,
-              "runs": 200
-            }
+            "optimizer": { "enabled": true, "runs": 200 }
           }
         },
         "constructorParameters": [
@@ -407,10 +394,7 @@
           "file": "contracts/common/ENSDeployer.sol",
           "version": "v0.5.17+commit.d19bba13",
           "settings": {
-            "optimizer": {
-              "enabled": true,
-              "runs": 200
-            }
+            "optimizer": { "enabled": true, "runs": 200 }
           }
         },
         "constructorParameters": []
@@ -425,10 +409,7 @@
           "file": "contracts/common/reputation.sol",
           "version": "v0.4.26+commit.4563c3fc",
           "settings": {
-            "optimizer": {
-              "enabled": true,
-              "runs": 200
-            }
+            "optimizer": { "enabled": true, "runs": 200 }
           }
         },
         "constructorParameters": [
@@ -456,10 +437,7 @@
           "file": "contracts/common/weightedMultiOwner.sol",
           "version": "v0.4.26+commit.4563c3fc",
           "settings": {
-            "optimizer": {
-              "enabled": true,
-              "runs": 200
-            }
+            "optimizer": { "enabled": true, "runs": 200 }
           }
         },
         "constructorParameters": [
@@ -468,25 +446,21 @@
             "hint": "Owner addresses",
             "type": "address[]",
             "value": [
-              "0x4B64C42F7ca2e82359811e741871516399ADEb1C",
-              "0xb29e163105db11A4114D63FeC7961A5BFEDe2c78",
-              "0x36c43FcAdB7080798A2B8c4554B7773F1A01CBb3",
-              "0xEC8dE0feF84b9f51b4639963E8Bf07923e8Abc51",
-              "0x5E9903b8119A56D60EDE5E4294228a24F7F44410",
-              "0xdFdb9Fa20e44A02f45C7e036D40749B7488cfeD3"
+              "0x2909e2bdecba9c55264ccb79eefbee4c4b153fae",
+              "0x888400c258ca23cf205b06e8c952e30a99eab790"
             ]
           },
           {
             "name": "_ownerWeights",
             "hint": "Owner weights",
             "type": "uint8[]",
-            "value": [3, 1, 1, 1, 1, 1]
+            "value": [1, 1]
           },
           {
             "name": "_required",
             "hint": "Weight amount needs to do something",
             "type": "uint256",
-            "value": 3
+            "value": 1
           }
         ]
       }
@@ -500,10 +474,7 @@
           "file": "contracts/common/weightedMultiOwner.sol",
           "version": "v0.4.26+commit.4563c3fc",
           "settings": {
-            "optimizer": {
-              "enabled": true,
-              "runs": 200
-            }
+            "optimizer": { "enabled": true, "runs": 200 }
           }
         },
         "constructorParameters": [
@@ -512,62 +483,28 @@
             "hint": "Owner addresses",
             "type": "address[]",
             "value": [
-              "0x4B64C42F7ca2e82359811e741871516399ADEb1C",
-              "0xbCa7A9428c77F9B6941Fb730b174f9ce9a1F0714",
-              "0x4784bdB3d84CB6D77D959B98CB51c7BDA2616753",
-              "0xad19E2114aD5c758fa6f2eC2c4002d4b7eab75db"
+              "0x2909e2bdecba9c55264ccb79eefbee4c4b153fae",
+              "0x888400c258ca23cf205b06e8c952e30a99eab790"
             ]
           },
           {
             "name": "_ownerWeights",
             "hint": "Owner weights",
             "type": "uint8[]",
-            "value": [2, 1, 1, 1]
+            "value": [1, 1]
           },
           {
             "name": "_required",
             "hint": "Weight amount needs to do something",
             "type": "uint256",
-            "value": 2
+            "value": 1
           }
         ]
       }
     },
-    "0x4B64C42F7ca2e82359811e741871516399ADEb1C": {
-      "name": "Owner address",
-      "balance": "0x1158e460913d00000"
-    },
-    "0xb29e163105db11A4114D63FeC7961A5BFEDe2c78": {
-      "name": "Owner address",
-      "balance": "0x1158e460913d00000"
-    },
-    "0x36c43FcAdB7080798A2B8c4554B7773F1A01CBb3": {
-      "name": "Owner address",
-      "balance": "0x1158e460913d00000"
-    },
-    "0xEC8dE0feF84b9f51b4639963E8Bf07923e8Abc51": {
-      "name": "Owner address",
-      "balance": "0x1158e460913d00000"
-    },
-    "0x5E9903b8119A56D60EDE5E4294228a24F7F44410": {
-      "name": "Owner address",
-      "balance": "0x1158e460913d00000"
-    },
-    "0xdFdb9Fa20e44A02f45C7e036D40749B7488cfeD3": {
-      "name": "Owner address",
-      "balance": "0x1158e460913d00000"
-    },
-    "0xbCa7A9428c77F9B6941Fb730b174f9ce9a1F0714": {
-      "name": "Owner address",
-      "balance": "0x1158e460913d00000"
-    },
-    "0x4784bdB3d84CB6D77D959B98CB51c7BDA2616753": {
-      "name": "Owner address",
-      "balance": "0x1158e460913d00000"
-    },
-    "0xad19E2114aD5c758fa6f2eC2c4002d4b7eab75db": {
-      "name": "Owner address",
-      "balance": "0x1158e460913d00000"
+    "0x2d72d155a258697d366f5e2cf4fbb3186cc432fa": {
+      "name": "Faucet address",
+      "balance": "1000000000000000000000"
     }
   }
 }
