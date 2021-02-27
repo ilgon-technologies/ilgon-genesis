@@ -1,0 +1,25 @@
+{
+  "name": "genesis-compiler",
+  "version": "1.0.0",
+  "main": "compiler/index.js",
+  "repository": "git@gitlab.com:ilc-projekt/ilc-project-infrastructure/genesis.git",
+  "author": "Ferenc Tamás <tamasf97@outlook.com>",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "compile:main": "node compiler/index.js compile -o out/ilg-main.json configs/ilg-main.conf.json",
+    "compile:test": "node compiler/index.js compile -o out/ilg-test.json configs/ilg-test.conf.json",
+    "compile:dev": "node compiler/index.js compile -o out/ilg-dev.json configs/ilg-dev.conf.json"
+  },
+  "dependencies": {
+    "ethereumjs-abi": "^0.6.8",
+    "node-fetch": "^2.6.1",
+    "npmlog": "^4.1.2",
+    "semver": "^7.3.4",
+    "solc": "^0.8.1",
+    "yargs": "^16.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.20.0"
+  }
+}
