@@ -9,7 +9,8 @@
   "scripts": {
     "compile:main": "node compiler/index.js compile -o out/ilg-main.json configs/ilg-main.conf.json",
     "compile:test": "node compiler/index.js compile -o out/ilg-test.json configs/ilg-test.conf.json",
-    "compile:dev": "node compiler/index.js compile -o out/ilg-dev.json configs/ilg-dev.conf.json"
+    "compile:dev": "node compiler/index.js compile -o out/ilg-dev.json configs/ilg-dev.conf.json",
+    "compile:all": "yarn compile:test && yarn compile:main"
   },
   "dependencies": {
     "ethereumjs-abi": "^0.6.8",
