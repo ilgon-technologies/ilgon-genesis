@@ -1,5 +1,6 @@
 {
   "name": "Ilgon Test",
+  "dataDir": "ilgt",
   "engine": {
     "authorityRound": {
       "params": {
